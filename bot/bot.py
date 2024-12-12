@@ -3,10 +3,11 @@ import logging
 
 from aiogram import Bot, Dispatcher
 
+from data import config
 from handlers import includer
 
 async def main() -> None:
-    bot = Bot(token="6961102720:AAGRoQDtGOWvZEf5Ndrbyez4KDngnmFWBLg")
+    bot = Bot(config.token.get_secret_value())
     dp = Dispatcher()
 
     logger = logging.getLogger(__name__)
