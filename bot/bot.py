@@ -3,7 +3,7 @@ import logging
 
 from aiogram import Bot, Dispatcher
 
-from data import config
+from data.configs import config
 from handlers import includer
 
 async def main() -> None:
